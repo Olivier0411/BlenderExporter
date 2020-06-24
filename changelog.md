@@ -138,16 +138,16 @@
 
 The custom property, textureDir, originally for [Tower of Babel](https://github.com/BabylonJS/Extensions/tree/master/QueuedInterpolation/Blender) to
 indicate the directory to write images, is now joined into the name
-field of the texture in the *.babylon* file.
+field of the texture in the *.json* file.
 
 If the field does not end with `/`, then one will be added between the
 directory & file name.
 
-The field is relative to the *.babylon* file.  For this to work probably
-implies that the *.babylon* is in the same directory as the html file.
+The field is relative to the *.json* file.  For this to work probably
+implies that the *.json* is in the same directory as the html file.
 Still it now allows images to be in a separate directory.
 
-Have not tested where the the *.babylon* is in a different directory from
+Have not tested where the the *.json* is in a different directory from
 html file.
 
 ## Blender Exporter Version 5.6.1

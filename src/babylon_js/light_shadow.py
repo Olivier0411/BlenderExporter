@@ -137,7 +137,7 @@ class ShadowGenerator:
             self.shadowBlurScale = lamp.data.shadowBlurScale
             self.shadowBlurBoxOffset = lamp.data.shadowBlurBoxOffset
 
-        # .babylon specific section
+        # .json specific section
         self.shadowCasters = []
         for mesh in meshesAndNodes:
             if (mesh.castShadows):

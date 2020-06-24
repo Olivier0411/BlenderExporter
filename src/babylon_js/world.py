@@ -235,7 +235,7 @@ bpy.types.World.writeCsvFile = bpy.props.BoolProperty(
 ###    JSON Specific     ###
 bpy.types.World.writeManifestFile = bpy.props.BoolProperty(
     name='Write .manifest file',
-    description="Automatically create or update [filename].babylon.manifest for this file",
+    description="Automatically create or update [filename].json.manifest for this file",
     default = True,
 )
 

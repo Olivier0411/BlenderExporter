@@ -7,7 +7,7 @@ from bpy import app
 from time import strftime
 FLOAT_PRECISION_DEFAULT = 4
 VERTEX_OUTPUT_PER_LINE = 50
-STRIP_LEADING_ZEROS_DEFAULT = False # false for .babylon
+STRIP_LEADING_ZEROS_DEFAULT = False # false for .json
 #===============================================================================
 #  module level formatting methods, called from multiple classes
 #===============================================================================
@@ -301,7 +301,7 @@ def same_array(arrayA, arrayB, precision = FLOAT_PRECISION_DEFAULT):
 
     return True
 #===============================================================================
-# module level methods for writing JSON (.babylon) files
+# module level methods for writing JSON (.json) files
 #===============================================================================
 def write_matrix4(file_handler, name, matrix, precision = FLOAT_PRECISION_DEFAULT):
     file_handler.write(',"' + name + '":[' + format_matrix4(matrix, precision) + ']')

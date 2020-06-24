@@ -3,8 +3,8 @@ bl_info = {
     'author': 'David Catuhe, Jeff Palmer',
     'version': (6, 4, 1),
     'blender': (2, 80, 0),
-    'location': 'File > Export > Babylon.js (.babylon)',
-    'description': 'Export Babylon.js scenes (.babylon)',
+    'location': 'File > Export > Trigon.js (.json)',
+    'description': 'Export Babylon.js scenes (.json)',
     'wiki_url': 'https://github.com/BabylonJS/BlenderExporter',
     'tracker_url': '',
     'category': 'Babylon.JS'}
@@ -14,7 +14,7 @@ from bpy_extras.io_utils import ExportHelper, ImportHelper
 
 # allow module to be changed during a session (dev purposes)
 if "bpy" in locals():
-    print('Reloading .babylon exporter')
+    print('Reloading .json exporter')
     import imp
     if 'materials' in locals():
         imp.reload(materials)  # directory
@@ -48,10 +48,10 @@ class JsonMain(bpy.types.Operator, ExportHelper):
     bl_idname = 'export.bjs'
     bl_label = 'Export Babylon.js scene' # used on the label of the actual 'save' button
     bl_options = {'REGISTER', 'UNDO'}
-    filename_ext = '.babylon'            # used as the extension on file selector
+    filename_ext = '.json'            # used as the extension on file selector
 
     filepath: bpy.props.StringProperty(subtype = 'FILE_PATH') # assigned once the file selector returns
-    filter_glob: bpy.props.StringProperty(name='.babylon',default='*.babylon', options={'HIDDEN'})
+    filter_glob: bpy.props.StringProperty(name='.json',default='*.json', options={'HIDDEN'})
 
     def execute(self, context):
         from .json_exporter import JsonExporter

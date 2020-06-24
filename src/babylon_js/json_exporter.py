@@ -174,9 +174,9 @@ class JsonExporter:
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     def to_json_file(self):
         Logger.log('========= Writing of JSON file started =========', 0)
-        file_handler = open(self.filepathMinusExtension + '.babylon', 'w', encoding='utf8')
+        file_handler = open(self.filepathMinusExtension + '.json', 'w', encoding='utf8')
         file_handler.write('{')
-        file_handler.write('"producer":{"name":"Blender","version":"' + bpy.app.version_string + '","exporter_version":"' + format_exporter_version() + '","file":"' + JsonExporter.nameSpace + '.babylon"},\n')
+        file_handler.write('"producer":{"name":"Blender","version":"' + bpy.app.version_string + '","exporter_version":"' + format_exporter_version() + '","file":"' + JsonExporter.nameSpace + '.json"},\n')
         self.world.to_json_file(file_handler, self)
 
         # Materials
@@ -292,7 +292,7 @@ class JsonExporter:
 
         # Create or update .manifest file
         if self.settings.writeManifestFile:
-            file_handler = open(self.filepathMinusExtension + '.babylon.manifest', 'w', encoding='utf8')
+            file_handler = open(self.filepathMinusExtension + '.json.manifest', 'w', encoding='utf8')
             file_handler.write('{\n')
             file_handler.write('\t"version" : ' + str(calendar.timegm(time.localtime())) + ',\n')
             file_handler.write('\t"enableSceneOffline" : true,\n')

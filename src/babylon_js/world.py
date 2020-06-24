@@ -236,7 +236,7 @@ bpy.types.World.writeCsvFile = bpy.props.BoolProperty(
 bpy.types.World.writeManifestFile = bpy.props.BoolProperty(
     name='Write .manifest file',
     description="Automatically create or update [filename].json.manifest for this file",
-    default = True,
+    default = False,
 )
 
 ###    Preserve Z-up and right-handed coordinate     ###

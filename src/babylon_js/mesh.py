@@ -524,7 +524,7 @@ class Mesh(FCurveAnimatable):
             import bmesh
             bm = bmesh.new()
             bm.from_mesh(mesh)
-            bmesh.ops.triangulate(bm, faces = bm.faces)
+            bmesh.ops.triangulate(bm, faces = bm.faces, quad_method = 'FIXED')
             bm.to_mesh(mesh)
             mesh.calc_loop_triangles()
             if mesh.has_custom_normals:

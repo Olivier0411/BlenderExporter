@@ -1,10 +1,10 @@
 bl_info = {
-    'name': 'Babylon.js',
+    'name': 'Trigon',
     'author': 'David Catuhe, Jeff Palmer',
     'version': (4, 6, 1),
     'blender': (2, 75, 0),
-    'location': 'File > Export > Babylon.js (.babylon)',
-    'description': 'Export Babylon.js scenes (.babylon)',
+    'location': 'File > Export > Trigon (.json)',
+    'description': 'Export Babylon.js scenes for Trigon (.json)',
     'wiki_url': 'https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/Blender',
     'tracker_url': '',
     'category': 'Import-Export'}
@@ -22,7 +22,7 @@ import sys, traceback # for writing errors to log file
 #===============================================================================
 # Registration the calling of the INFO_MT_file_export file selector
 def menu_func(self, context):
-    self.layout.operator(Main.bl_idname, text = 'Babylon.js [.babylon] ver ' + format_version())
+    self.layout.operator(Main.bl_idname, text = 'Trigon [.json] ver ' + format_version())
 
 def register():
     bpy.utils.register_module(__name__)

@@ -1,13 +1,13 @@
 bl_info = {
-    'name': 'Babylon.js',
+    'name': 'Trigon',
     'author': 'David Catuhe, Jeff Palmer',
     'version': (6, 4, 1),
     'blender': (2, 80, 0),
-    'location': 'File > Export > Trigon.js (.json)',
-    'description': 'Export Babylon.js scenes (.json)',
+    'location': 'File > Export > Trigon (.json)',
+    'description': 'Export Trigon scenes (.json)',
     'wiki_url': 'https://github.com/BabylonJS/BlenderExporter',
     'tracker_url': '',
-    'category': 'Babylon.JS'}
+    'category': 'Trigon'}
 
 import bpy
 from bpy_extras.io_utils import ExportHelper, ImportHelper
